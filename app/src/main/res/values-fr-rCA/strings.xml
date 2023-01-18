@@ -2,5 +2,4 @@
 <resources>
     <string name="app_name">Eric\'s Android Labs</string>
     <string name="hello">Bonjour a tous</string>
-    <string name="button">CLiquez moi</string>
 </resources>
