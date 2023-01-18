@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Eric\'s Android Labs</string>
+    <string name="hello">Bonjour </string>
+    <string name="button">CLiquez</string>
+</resources>
