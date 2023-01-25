@@ -16,6 +16,4 @@ public class MainActivity extends AppCompatActivity {
                     //layout is the folder
                     //activity_main is the file
     }
-
-
 }
