@@ -4,6 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:layout_marginTop="27dp"
+    android:layout_marginBottom="27dp"
+    android:layout_marginLeft="48dp"
+    android:layout_marginRight="48dp"
+
+
+
     tools:context=".MainActivity">
 
     <Button
@@ -13,6 +21,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:text="1"
+
+        android:nextFocusUp="@id/button"
+        android:nextFocusDown="@id/button"
+        android:nextFocusLeft="@id/button3"
+        android:nextFocusRight="@id/button2"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,6 +46,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2"
+
+        android:nextFocusUp="@id/button3"
+        android:nextFocusDown="@id/button3"
+        android:nextFocusRight="@id/button"
+        android:nextFocusLeft="@id/button2"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button2"
@@ -47,9 +66,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2"
         app:srcCompat="@drawable/flag" />
-<!--toEnd --> means right in Left to right language
-    <!--toStart --> means left in Left to right language
-
 
     <!--1) de-rDE-->
     <!--2) de -->
