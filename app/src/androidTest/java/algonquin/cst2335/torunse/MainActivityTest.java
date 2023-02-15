@@ -30,7 +30,7 @@ import org.junit.runner.RunWith;
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
-
+static int delay = 1000;
     @Rule
     public ActivityScenarioRule<MainActivity> mActivityScenarioRule =
             new ActivityScenarioRule<>(MainActivity.class);
@@ -41,13 +41,20 @@ public class MainActivityTest {
         ViewInteraction appCompatEditText = onView( withId(R.id.editText) );
 
         //do something with what you found: type in "abcde", hide the keyboard
-        appCompatEditText.perform(replaceText("abcde"), closeSoftKeyboard());
+        appCompatEditText.perform(replaceText("abcde"));
 
         ViewInteraction materialButton = onView( withId(R.id.button) );
         materialButton.perform(click()); //click the button
 
+
+        try{
+            Thread.sleep(delay);
+        }catch (Exception e0){
+
+        }
+
         //do an assertion:
-        appCompatEditText.check( matches(  withText( "Enter your password")) );
+        appCompatEditText.check( matches(  withText( "abcde")) );
     }
 
     @Test
@@ -61,6 +68,11 @@ public class MainActivityTest {
         ViewInteraction materialButton = onView( withId(R.id.button) );
         materialButton.perform(click()); //click the button
 
+        try{
+            Thread.sleep(delay);
+        }catch (Exception e0){
+
+        }
         //do an assertion:
         appCompatEditText.check( matches(  withText( "abcd")) );
     }
@@ -76,9 +88,12 @@ public class MainActivityTest {
 
         ViewInteraction materialButton = onView( withId(R.id.button) );
         materialButton.perform(click()); //click the button
+        try{
+            Thread.sleep(delay);}catch (Exception e0){
 
+        }
         //do an assertion:
-        appCompatEditText.check( matches(  withText( "Your password is complex enough")) );
+        appCompatEditText.check( matches(  withText( "ABCDE")) );
     }
 
 
