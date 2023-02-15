@@ -85,13 +85,13 @@ static int delay = 1000;
 
         //do something with what you found: type in "abcde", hide the keyboard
         appCompatEditText.perform(replaceText("ABCDE"), closeSoftKeyboard());
+
+        ViewInteraction materialButton = onView( withId(R.id.button) );
+        materialButton.perform(click()); //click the button
         try{
             Thread.sleep(delay);}catch (Exception e0){
 
         }
-        ViewInteraction materialButton = onView( withId(R.id.button) );
-        materialButton.perform(click()); //click the button
-
         //do an assertion:
         appCompatEditText.check( matches(  withText( "ABCDE")) );
     }
